@@ -71,6 +71,7 @@ def priority(request, todo_id):
         elif request.method == "DELETE":
             priority.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
+            print ("hello")
 
     except Priority.DoesNotExist:
         return Response(status=status.HTTP_400_BAD_REQUEST)
